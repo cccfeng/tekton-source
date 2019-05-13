@@ -1,9 +1,4 @@
 #!/bin/sh
-# buildkitd deamon
-buildkitd --addr tcp://0.0.0.0:1234 --oci-worker-snapshotter native --debug & 
-# hack for buildkitd started
-sleep 3 
-
 sc='buildctl build --exporter=image --frontend dockerfile.v0'
 workspace='.'
 BUILDKIT_HOST='.'
